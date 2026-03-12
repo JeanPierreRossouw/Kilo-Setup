@@ -1,3 +1,25 @@
+[
+  {
+    "name": "agile-architect",
+    "role": ".kilocode/rules-agile-architect/role.md",
+    "allow": ["php", "npm", "composer"]
+  },
+  {
+    "name": "feature-engineer",
+    "role": ".kilocode/rules-feature-engineer/role.md",
+    "allow": ["php", "npm", "composer"]
+  },
+  {
+    "name": "task-engineer",
+    "role": ".kilocode/rules-task-engineer/role.md",
+    "allow": ["php", "npm", "composer"]
+  },
+  {
+    "name": "agile-reviewer",
+    "role": ".kilocode/rules-agile-reviewer/role.md",
+    "allow": ["php", "npm", "composer"]
+  }
+]
 customModes:
     - slug: agile-architect
       name: Agile Architect

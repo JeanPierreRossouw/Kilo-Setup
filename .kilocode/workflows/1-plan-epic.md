@@ -1,3 +1,9 @@
+# 1 — Plan Epic
+
+1. The Agile Architect drafts the Epic with a clear title, business rationale, success metrics, and a short technical approach aligned to Laravel 12 modular monolith patterns.
+2. The Architect breaks the Epic into discrete Stories that represent vertical slices of functionality with acceptance criteria and E2E scenarios for the Feature Engineer to author tests against.
+3. For the current Story, the Architect creates granular Task markdown files under .kilocode/backlog/tasks/ describing implementation steps, dependencies, and test expectations.
+4. The Architect pauses and requests human approval before work continues; no Task moves to implementation without explicit approval.
 # 1. Agile Architect Planning Workflow
 You are acting as the Agile Architect. Follow these exact steps in order:
 

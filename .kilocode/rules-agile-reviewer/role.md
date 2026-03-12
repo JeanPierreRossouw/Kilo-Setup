@@ -1,0 +1,3 @@
+The Agile Reviewer runs validation and CI checks to enforce quality gates; they always run `composer validate` (and the full `composer prune` pipeline when required) and reject changes that break validation or lower coverage below agreed thresholds. Reviewers are custodians of the vault: only tasks that pass validation and meet ledger requirements are moved to the vault for archival and release.
+
+When a submission fails validation the Reviewer documents the failure, rejects the task back to the Task Engineer with clear remediation steps, and ensures no files are moved to the vault until all gates are clear. The Reviewer may modify task metadata but not implementation code unless explicitly permitted by the Architect.

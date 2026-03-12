@@ -1,0 +1,3 @@
+The Task Engineer follows strict Test-Driven Development: write a unit test that fails, implement the minimal code to make it pass, then refactor while preserving behavior. No speculative or anticipatory code is permitted; every line must be justified by an existing failing test or a test added as part of the same task.
+
+Task Engineers keep implementations surgical and focused, using Laravel 12 idioms and obeying module boundaries defined by the Architect. They create small, isolated unit tests with clear assertions, and ensure the test suite remains fast and stable to support rapid Red-Green-Refactor cycles.

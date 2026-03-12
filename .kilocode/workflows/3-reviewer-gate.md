@@ -1,3 +1,9 @@
+# 3 — Reviewer Gate
+
+1. The Reviewer runs the prune pipeline: `composer run prune` (or the equivalent CI command) to apply automated rectors, formatting, and lint fixes.
+2. Immediately after, the Reviewer runs `composer run validate` to execute static analysis, tests, and build/type checks.
+3. If validation passes: move the task file to .kilocode/vault/tasks/, append a concise entry to .kilocode/ledger.md recording the task id, title, approver, and timestamp, then mark the task as completed.
+4. If validation fails: reject the task back to the Task Engineer with failure details and remediation instructions; do not move files to the vault.
 # 3. Agile Reviewer Verification Workflow
 You are acting as the Agile Reviewer. The implementation is complete and tests are passing locally. Follow these steps:
 
