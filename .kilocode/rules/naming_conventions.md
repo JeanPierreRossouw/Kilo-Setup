@@ -1,7 +1,9 @@
-This file contains the project's naming conventions.
+# Naming Conventions
 
-- Use kebab-case for npm package names.
-- Use StudlyCase for PHP class names.
-- Use snake_case for database columns and migration files.
-
-Maintain consistent naming across modules and packages.
+- **PHP Classes/Traits**: `StudlyCase`
+- **Methods/Variables**: `camelCase`
+- **Database Tables**: `snake_case` (plural)
+- **Database Columns**: `snake_case` (singular)
+- **Vue Components**: `PascalCase`
+- **Vue Composables**: `useCamelCase`
+- **Tests**: Descriptive string names in Pest (e.g., `it('does a thing')`)

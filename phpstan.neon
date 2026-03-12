@@ -2,8 +2,6 @@ includes:
     - vendor/larastan/larastan/extension.neon
 parameters:
     level: 8
-    paths:
-        - app/
-        - tests/
+    paths: [app/, tests/]
     ignoreErrors: []
     checkMissingIterableValueType: false

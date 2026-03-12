@@ -1,3 +1,3 @@
-# Kilo Ledger
-
-This ledger records vaulted tasks with id, title, approver, and timestamp.
+# Architecture Ledger
+| Date | Task ID/Name | Approver | Vault Path | Notes |
+|---|---|---|---|---|

@@ -1,30 +1,29 @@
 name: AI Referee CI
-
 on:
   pull_request:
-    branches: [ main ]
-
+    branches: [ main, develop ]
 jobs:
   verify-code:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup Environment
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2, pint, pest
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          
       - name: Install Dependencies
-        run: npm ci
-
-      - name: Enforce Formatting & Linting
-        run: npm run lint
-
-      - name: Run TDD Suite (Unit & Feature)
-        run: npm test
-
-      - name: SAST Security Scan (Trivy)
+        run: composer install --prefer-dist --no-progress && npm ci
+      - name: AI Validation (Prune & Validate)
+        run: composer run prune && composer run validate
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ":memory:"
+      - name: SAST Security Scan
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
